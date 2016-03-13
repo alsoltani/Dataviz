@@ -26,103 +26,54 @@
 <body>
 Transition duration: 0<input type="range" id="duration" min="0" max="5000">5000 
 <br>
-<button style="background-color:#FFFFFF" class="16">16-17h</button><button style="background-color:#F2F2F2" class="17">17-18h</button><button style="background-color:#D8D8D8" class="18">18-19h</button><button style="background-color:#A4A4A4" class="19">19-20h</button><button style="background-color:#6E6E6E" class="20">20-21h</button><button style="background-color:#FFFFFF" class="21">21-22h</button><button style="background-color:#FFFFFF" class="22">22-23h</button>
+<button style="background-color:#FFFFFF" class="a1617">16-17h</button><button style="background-color:#F2F2F2" class="a1718">17-18h</button><button style="background-color:#D8D8D8" class="a1819">18-19h</button><button style="background-color:#A4A4A4" class="a1920">19-20h</button><button style="background-color:#6E6E6E" class="a2021">20-21h</button><button style="background-color:#FFFFFF" class="a2122">21-22h</button><button style="background-color:#FFFFFF" class="a2223">22-23h</button>
+
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
-var  16 = [
-            { label: "Adventure", value: 1 },
-{ label: "Animation", value: 1 },
-{ label: "Comedy", value: 1},
-            { label: "Fantasy", value: 1}
-    ];
-   
-var  17 = [
-            { label: "Action", value: 18 },
-            { label: "Adventure", value: 18 },
-            { label: "Animation", value: 26 },
-            { label: "Comedy", value: 33 },
-            { label: "Crime", value: 3 },
-            { label: "Drama", value: 17 },
-            { label: "Family", value: 3 },
-            { label: "Fantasy", value: 15 },
-            { label: "History", value: 2 },
-            { label: "Horror", value: 5 },
-            { label: "Music", value: 3 },
-            { label: "Mystery", value: 7 },
-            { label: "Romance", value: 2 },
-            { label: "Sci-Fi", value: 10 },
-            { label: "Thriller", value: 8 },
-            { label: "War", value: 1 }
-    ];
-    
-var 18 = [
-            {label: "Action" , value: 6},
-            {label: "Adventure" , value: 6},
-            {label: "Biography" , value: 1},
-            {label: "Comedy" , value: 6},
-            {label: "Crime" , value: 16},
-            {label: "Drama" , value: 38},
-            {label: "Family" , value: 1},
-            {label: "Fantasy" , value: 3},
-            {label: "History" , value: 3},
-            {label: "Horror" , value: 3},
-            {label: "Mystery" , value: 11},
-            {label: "Sci-Fi" , value: 8},
-            {label: "Sport" , value: 1},
-            {label: "Talk-Show" , value: 1},
-            {label: "Thriller" , value: 14},
-            {label: "Western" , value: 1}
-    ]
-    
-var 19 = [
-            {label: "Adventure", value: 1},
-            {label: "Comedy", value: 1},
-            {label: "Drama", value: 3},
-            {label: "Fantasy", value: 1},
-            {label: "Mystery", value: 1},
-            {label: "Romance", value: 3},
-            {label: "Sci-Fi", value: 1}
-    ]
+    var a1617 = [
+                {label: "1A" , value: 19},
+                {label: "2A" , value: 22},
+                {label: "3A" , value: 13}
+                
+        ];
+        
+    var a1718 = [
+                {label: "1A" , value: 16},
+                {label: "2A" , value: 27},
+                {label: "3A" , value: 10}      
+        ]
 
-var 20 = [
-            {label: "Action", value: 1},
-            {label: "Comedy", value: 3},
-            {label: "Crime", value: 2},
-            {label: "Drama", value: 3},
-            {label: "History", value: 1},
-            {label: "Mystery", value: 2},
-            {label: "Romance", value: 1},
-            {label: "Sci-Fi", value: 1},
-            {label: "Thriller", value: 1},
-            {label: "War", value: 1}
-    ]
+    var a1819 = [
+                {label: "1A" , value: 20},
+                {label: "2A" , value: 32},
+                {label: "3A" , value: 19}
+        ]
 
-var 21 = [
-            {label: "Action", value: 1},
-            {label: "Comedy", value: 3},
-            {label: "Crime", value: 2},
-            {label: "Drama", value: 3},
-            {label: "History", value: 1},
-            {label: "Mystery", value: 2},
-            {label: "Romance", value: 1},
-            {label: "Sci-Fi", value: 1},
-            {label: "Thriller", value: 1},
-            {label: "War", value: 1}
-    ]
+    var a1920 = [
+                {label: "1A" , value: 20},
+                {label: "2A" , value: 26},
+                {label: "3A" , value: 17}
+        ]
 
-var 22 = [
-            {label: "Action", value: 1},
-            {label: "Comedy", value: 3},
-            {label: "Crime", value: 2},
-            {label: "Drama", value: 3},
-            {label: "History", value: 1},
-            {label: "Mystery", value: 2},
-            {label: "Romance", value: 1},
-            {label: "Sci-Fi", value: 1},
-            {label: "Thriller", value: 1},
-            {label: "War", value: 1}
-    ]
+    var a2021 = [
+                {label: "1A" , value: 21},
+                {label: "2A" , value: 26},
+                {label: "3A" , value: 13}
+        ]
+
+    var a2122 = [
+                {label: "1A" , value: 18},
+                {label: "2A" , value: 22},
+                {label: "3A" , value: 10}
+        ]
+
+    var a2223 = [
+                {label: "1A" , value: 16},
+                {label: "2A" , value: 26},
+                {label: "3A" , value: 11}
+        ]
+
 
 var svg = d3.select("body")
 .append("svg")
@@ -162,32 +113,40 @@ svg.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 var key = function(d){ return d.data.label; };
 
 var color = d3.scale.category20()
-        .domain(["Action","Adventure","Animation","Biography","Comedy","Crime","Drama","Family","Fantasy","History","Horror","Music","Mystery","Romance","Sci-Fi","Sport","Talk-Show","Thriller","War","Western"])
+        .domain(["1A","2A","3A"])
 
-.range(["#2484c1", "#0c6197", "#4daa4b", "#90c469", "#daca61", "#e4a14b", "#e98125", "#cb2121", "#830909", "#ae83d5", "#bf273e", "#ce2aeb", "#bca44a", "#618d1b", "#1ee67b", "#b0ec44", "#a4a0c9", "#322849", "#86f71a", "#cc9fb1"]);   
+.range(["#2484c1", "#0c6197", "#4daa4b"]);   
 
-change(a20);
+change(a1617);
 
 
-d3.select(".a20")
+d3.select(".a1617")
 .on("click", function(){
-change(a20);
+change(a1617);
 });    
-d3.select(".a40")
+d3.select(".a1718")
 .on("click", function(){
-change(a40);
+change(a1718);
 });
-d3.select(".a60")
+d3.select(".a1819")
 .on("click", function(){
-change(a60);
+change(a1819);
 });    
-d3.select(".a80")
+d3.select(".a1920")
 .on("click", function(){
-change(a80);
+change(a1920);
 });   
-d3.select(".a100")
+d3.select(".a2021")
 .on("click", function(){
-change(a100);
+change(a2021);
+});
+d3.select(".a2122")
+.on("click", function(){
+change(a2122);
+});
+d3.select(".a2223")
+.on("click", function(){
+change(a2223);
 });
 
 function mergeWithFirstEqualZero(first, second){
